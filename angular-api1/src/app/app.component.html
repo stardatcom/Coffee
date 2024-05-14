@@ -1,0 +1,54 @@
+<!-- Este es un test -->
+<!-- <p>Hey, works!</p>
+<ol>
+  @for(elemento of todosLosDatos; track elemento.id){
+    <li>{{elemento.name}}</li>
+  }
+</ol> -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary mb-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <span class="text-primary-emphasis fs-5 fw-bold">Music Finder</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="x">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+  <div class="text-center my-5">
+  <h1>Music Tracks</h1>
+  <p>From various streaming platforms: YouTube, SoundCloud, Vimeo, Deezer.</p>
+</div>
+</header>
+<main class="container d-flex flex-wrap justify-content-center gap-5">
+  @for(elemento of todosLosDatos; track elemento.id){
+      <div class="card" style="width: 18rem;">
+          <img src="{{elemento.img}}" class="card-img-top" alt="{{elemento.name}}'s pic">
+          <div class="card-body">
+              <h5 class="card-title">{{elemento.name}}</h5>
+              <p class="card-text">{{elemento.text}}</p>
+              <p class="card-text">{{elemento.src.id}}</p> 
+              <p class="card-text">{{elemento.pl.name}}</p>
+          </div>
+      </div>
+  }
+</main>
+<footer class="text-center my-5">&copy; 2024. Music Finder. All rights reserved.</footer>
+<router-outlet />
